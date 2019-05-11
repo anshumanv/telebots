@@ -23,9 +23,12 @@ const Bots = (props: object) => {
     <div className="bots">
       {bots.map((bot:any) => {
         return (
-          <Card className="bots__card">
+          <Card
+            className="bots__card"
+            // style={{ background: "#282c34", color: "white" }}
+          >
             <div className="bots__card__header">
-              <div className="bots__card__header__name">{bot[0]}</div>
+              <h2 className="bots__card__header__name">{bot[0]}</h2>
             </div>
             <div className="body__card__body">
               <div className="body__card__body_desc">

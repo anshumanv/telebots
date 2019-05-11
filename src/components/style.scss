@@ -2,11 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+
 
   &__card {
-    border: 2px solid red;
-
+    border-radius: 5px;
+    background-color: #282c34 !important;
+    color: white !important;
   }
 
 }
