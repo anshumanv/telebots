@@ -1,15 +1,17 @@
 import React from 'react';
+import Bots from './components/Bots';
 import logo from './logo.svg';
 import './App.css';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to lel.
         </p>
+        <Bots />
         <a
           className="App-link"
           href="https://reactjs.org"
