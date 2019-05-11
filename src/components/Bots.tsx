@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Card from 'card-vibes';
 import { array } from 'prop-types';
+
+import './style.scss';
 
 const Bots = (props: object) => {
   
@@ -17,21 +20,25 @@ const Bots = (props: object) => {
   }, [])
   
   return (
-    <div className="bots-container">
+    <div className="bots">
       {bots.map((bot:any) => {
         return (
-          <div className="card-container">
-            <div className="header">
-              <div className="name">{bot[0]}</div>
+          <Card className="bots__card">
+            <div className="bots__card__header">
+              <div className="bots__card__header__name">{bot[0]}</div>
             </div>
-            <div className="body">
-              <div className="desc">{bot[1] || ""}</div>
-              <div className="link">{bot[2] || ""}</div>
-              <div className="maintainer">
+            <div className="body__card__body">
+              <div className="body__card__body_desc">
+                {bot[1] || ""}
+              </div>
+              <div className="body__card__body_link">
+                {bot[2] || ""}
+              </div>
+              <div className="body__card__body_maintainer">
                 {bot[3] || ""}
               </div>
             </div>
-          </div>
+          </Card>
         );
       })}
     </div>
