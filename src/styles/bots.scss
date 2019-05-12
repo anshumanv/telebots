@@ -10,11 +10,10 @@
     color: white !important;
 
     &__body {
-      &__desc {
-        height: 4rem;
+      &__desc p{
+        height: 5rem;
         text-overflow: ellipsis;
         overflow: hidden;
-        white-space: nowrap;
       }
       &__link {
         display: flex;
