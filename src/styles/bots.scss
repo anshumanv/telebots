@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  transition: 1s all;
 
   &__card {
     border-radius: 5px;
@@ -28,6 +28,14 @@
         display: flex;
         justify-content: space-around;
         font-size: 1.5rem;
+        div {
+          display: flex;
+          justify-content: space-around
+        }
+        div span a {
+          color: #EEE2DC;
+          text-decoration: none;
+        }
       }
     }
   }
