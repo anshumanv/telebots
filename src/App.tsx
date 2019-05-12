@@ -1,6 +1,7 @@
 import React from 'react';
 import Bots from './components/Bots';
-import './App.scss';
+import Footer from './components/Footer';
+import './styles/App.scss';
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
         <h1>telebots 🤖</h1>
         <Bots />
       </header>
+      <Footer />
     </div>
   );
 }
