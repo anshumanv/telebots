@@ -1,44 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center"> telebots 🤖 </h1>
+<p align="center">
 
-## Available Scripts
+<img src="https://img.shields.io/github/license/anshumanv/telebots.svg?style=for-the-badge" align="center">
 
-In the project directory, you can run:
+</p>
 
-### `npm start`
+Telegram bots list from [/r/TelegramBots](https://www.reddit.com/r/TelegramBots/comments/3b0glc/master_list_of_telegram_bots_will_be_updated/)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Uses
 
-### `npm test`
+* React with Hooks
+* SASS
+* Sheets API (via a wrapper which uses my creds and fetches data)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Why?
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Bots list is maintained in a [sheet](https://docs.google.com/spreadsheets/d/1uQP3f2bWuPapTn_1FUcL67jW9MwLzSjysji39pmyUxY/) which is uncool to check.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### How do I get my bot there?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Post your bot [here](https://www.reddit.com/r/TelegramBots/comments/3b0glc/master_list_of_telegram_bots_will_be_updated/) and wait for it to be included in sheet.
 
-### `npm run eject`
+## Dev
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+git clone https://github.com/anshumanv/telebots
+cd telebots
+yarn install && yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Author
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[Anshuman Verma](https://github.com/anshumanv)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[<img src="https://image.flaticon.com/icons/svg/185/185961.svg" width="35" padding="10">](https://twitter.com/Anshumaniac12)
+[<img src="https://image.flaticon.com/icons/svg/185/185964.svg" width="35" padding="10">](https://linkedin.com/in/anshumanv12)
+[<img src="https://image.flaticon.com/icons/svg/185/185981.svg" width="35" padding="10">](https://www.facebook.com/anshumanv12)
+[<img src="https://image.flaticon.com/icons/svg/985/985680.svg" width="35" padding="10">](https://www.paypal.me/AnshumanVerma)
