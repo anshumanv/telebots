@@ -8,32 +8,46 @@ import BotCard from './BotCard';
 import '../styles/bots.scss';
 
 const Bots = () => {
-  const [bots, updateBots] = useState([]);
+  const [bots, updateBots] = useState({});
 
   // Cool stuff
   useEffect(() => {
     async function getBots() {
       const botsList = await axios.get(`https://telebot.glitch.me/`); // Yeah this fetches bots from the sheet, correct!
-      const onlyBots = botsList.data.filter((bot: string[]) => bot.length > 1);
-      const sections = botsList.data.filter(
-        (bot: string[]) => bot.length == 1
-      );
-      console.log(onlyBots, sections)
-      updateBots(onlyBots);
+      let sortedBots: any = {}, lastBot: string = '';
+      botsList.data.forEach((bot: string[]) => {
+        if(bot.length === 1) {
+          sortedBots[bot[0]] = [];
+          lastBot = bot[0];
+        }
+        else {
+          sortedBots[lastBot].push(bot);
+        }
+      })
+      updateBots(sortedBots);
+      console.log(sortedBots)
     }
     getBots();
   }, [])
   
   return (
     <div>
-      {bots.length ? (
-        <div className="bots">
-          {bots.map((bot: any) => {
-            // if(bot.length == 1) return <h2>{bot[0]}<br /></h2>
-            return (
-              <BotCard key={bot[0]} bot={bot} />
-            );
-          })}
+      {Object.keys(bots).length ? (
+        <div>
+          {
+            Object.keys(bots).map((key: string) => {
+              return (
+                <div className="section" key={key}>
+                  <h2 className="section__title">{key}</h2>
+                  <div className="bots">
+                    {bots[key].map((bot: any) => {
+                      return <BotCard key={bot[0]} bot={bot} />;
+                    })}
+                  </div>
+                </div>
+              );
+            })
+          }
         </div>
       ) : (
         <div className="loader-wrap">

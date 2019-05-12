@@ -33,12 +33,17 @@
           display: flex;
           justify-content: space-around
         }
-        div span a {
+        span a {
           color: #EEE2DC;
           text-decoration: none;
         }
       }
     }
   }
+}
 
+.section {
+    &__title {
+      margin-left: 10%;
+    }
 }
