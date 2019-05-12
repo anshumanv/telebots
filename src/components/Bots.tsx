@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from 'card-vibes';
+import { FaReddit, FaTelegram, FaTelegramPlane } from "react-icons/fa";
+
 import { array } from 'prop-types';
 
 import './style.scss';
@@ -30,15 +32,30 @@ const Bots = (props: object) => {
             <div className="bots__card__header">
               <h2 className="bots__card__header__name">{bot[0]}</h2>
             </div>
-            <div className="body__card__body">
-              <div className="body__card__body_desc">
+            <div className="bots__card__body">
+              <div className="bots__card__body__desc">
                 {bot[1] || ""}
               </div>
-              <div className="body__card__body_link">
-                {bot[2] || ""}
+              <div className="bots__card__body__link">
+                👉 &nbsp;
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={bot[2] || ""}
+                  title={`Use ${bot[0]} here`}
+                >
+                  <FaTelegramPlane />
+                </a>
               </div>
-              <div className="body__card__body_maintainer">
-                {bot[3] || ""}
+              <div className="bots__card__body__maintainer">
+                Maintainer:
+                <span>
+                  <FaReddit />
+                </span>
+                <span>
+                  <FaTelegram />
+                </span>
+                {/* {bot[3] || ""} */}
               </div>
             </div>
           </Card>

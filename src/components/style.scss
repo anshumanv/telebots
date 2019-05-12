@@ -8,6 +8,29 @@
     border-radius: 5px;
     background-color: #282c34 !important;
     color: white !important;
+
+    &__body {
+      &__desc {
+        height: 4rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      &__link {
+        display: flex;
+        justify-content: center;
+        font-size: 2.5rem;
+        a {
+          color: #EEE2DC;
+          text-decoration: none;
+        }
+      }
+      &__maintainer {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.5rem;
+      }
+    }
   }
 
 }
